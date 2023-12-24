@@ -13,10 +13,10 @@ services:
 
   cycle4j:
     build:
-      context: ..
+      context: .
       dockerfile: .devcontainer/Dockerfile
     volumes:
-      - ..:/workspace
+      - .:/workspace
     links:
       - datastore
     environment:
