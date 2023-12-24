@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  datastore:
+    image: neo4j:5.15.0-bullseye
+    environment:
+        - NEO4J_AUTH=neo4j/neo4jdev
+    ports:
+      - 7474:7474
+      - 7373:7373
+      - 7687:7687
+    restart: always
+
+  cycle4j:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace
+    links:
+      - datastore
+    environment:
+      - ORG_NEO4J_DRIVER_URI=bolt://datastore:7687
+      - NEO4J_AUTH=neo4j/neo4jdev
+    ports:
+      - "8080:8080"
+    command: sleep infinity
