@@ -1,5 +1,9 @@
 version: '3.8'
 
+networks:
+  cyclenet:
+    driver: bridge
+    
 services:
   cycle-store:
     image: neo4j:5.15.0-bullseye
@@ -11,4 +15,4 @@ services:
       - 7687:7687
     restart: always
     networks:
-      - cycle-net
+      - cyclenet
