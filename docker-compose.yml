@@ -7,6 +7,7 @@ networks:
     
 services:
   cycle-store:
+    container_name: cycle-store
     image: neo4j:5.15.0-bullseye
     environment:
       - NEO4J_AUTH=neo4j/neo4jdev
