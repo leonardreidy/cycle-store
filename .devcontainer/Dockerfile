@@ -1,5 +1,6 @@
 FROM neo4j:5.15.0-bullseye
 
+## Add dependencies inside the run block below, as needed
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
    && apt-get -y install --no-install-recommends libsecret-1-dev \
