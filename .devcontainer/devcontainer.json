@@ -1,5 +1,5 @@
 {
-  "name": "Neo4j/JavaScript Starter",
+  "name": "cycle-store",
   "dockerComposeFile": "../docker-compose.yml",
   "workspaceFolder": "/workspace",
   "shutdownAction": "stopCompose",
