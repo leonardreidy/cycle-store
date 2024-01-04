@@ -4,9 +4,9 @@ Storage for Cycle
 
 ## About Cycle Storage
 
-The Cycle project uses Neo4J, a native graph database that is built for the storage and retrieval of connected data, i.e., graph data. The devcontainer is built around the official Neo4J image. Neo4J provides a number of tools to reduce the friction of learning and developing with graph applications. Key among those tools is the Neo4J browser.
+The Cycle project uses Neo4J, a native graph database that is built for the storage and retrieval of connected data, i.e., graph data. The devcontainer is built around the official Neo4J image. Neo4J provides a number of tools to reduce the friction of learning and developing with graph applications including the Neo4J browser.
 
-### Neo4J Browser
+## Neo4J Browser
 
 The browser is useful for learning Cypher (the query language of Neo4J), and for visualizing and exploring data in the db.
 
@@ -14,7 +14,11 @@ To access the browser, navigate to:
 
  `http://localhost:7474`
 
-and enter the credentials. Default credentials may be used. See the Neo4J docs.
+and enter the credentials. 
+
+##s Credentials
+
+Out of the box, the db credentials for the initial user are defined by default and you can learn more by reviewing the [Neo4J docs](https://neo4j.com/docs/operations-manual/current/configuration/set-initial-password/). However, I have chosen to enforce the customization of the initial user credentials using variable interpolation error syntax for the docker-compose environment definition. As such, if an env file with the appropriate variable isn't defined, the container build will error out with a warning. To avoid this, copy the `.env.example` and either leave it as defined or supply alternate credentials.
 
 ## Installation
 
