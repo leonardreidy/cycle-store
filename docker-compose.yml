@@ -8,11 +8,13 @@ networks:
 services:
   cycle-store:
     container_name: cycle-store
+    environment:
+      - NEO4J_AUTH=${NEO4J_AUTH:?err}
     image: neo4j:5.15.0-bullseye
+    networks:
+      - cyclenet
     ports:
       - 7474:7474
       - 7373:7373
       - 7687:7687
     restart: always
-    networks:
-      - cyclenet
