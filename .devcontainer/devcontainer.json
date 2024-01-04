@@ -10,6 +10,7 @@
       "nodeGypDependencies": true
     }
   },
+  "mounts": [ "source=./,target=/workspace,type=bind,consistency=cached" ],
   "postCreateCommand": "npm install -g npm@10.2.5 && npm install -g @devcontainers/cli",
   "customizations": {
     "vscode": {
