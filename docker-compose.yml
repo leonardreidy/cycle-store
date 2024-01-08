@@ -9,7 +9,7 @@ services:
   cycle-store:
     container_name: cycle-store
     environment:
-      - NEO4J_AUTH=${NEO4J_AUTH:?err}
+      - NEO4J_AUTH=${NEO4J_AUTH:neo4j/neo4j}
     image: neo4j:5.15.0-bullseye
     networks:
       - cyclenet
