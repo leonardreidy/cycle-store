@@ -16,7 +16,7 @@ and enter the credentials.
 
 ## Credentials
 
-Out of the box, the db credentials for the initial user are defined by default and you can learn more by reviewing the [Neo4J docs](https://neo4j.com/docs/operations-manual/current/configuration/set-initial-password/). If you wish to use a custom password, you can define a `.env` file based on the existing `.env.example` and change the given password to your own. 
+Out of the box, the db credentials for the initial user are defined by default and you can learn more by reviewing the [Neo4J docs](https://neo4j.com/docs/operations-manual/current/configuration/set-initial-password/). If you wish to use a custom initial user password, you can define a `.env` file based on the existing `.env.example` and change the given password to your own. If you do not, the initial user credentials fallback defined in the `docker-compose.yaml` file will be used instead.
 
 ## Installation
 
